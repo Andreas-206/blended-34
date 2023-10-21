@@ -33,12 +33,35 @@
 
 /* Task 3 */
 
-function calcResalt(namber) {
-  let sum = 0;
-  for (let i = 0; i <= namber; i++) {
-    console.log(sum, i);
-    sum += i;
-  }
-  return sum;
+// function calcResalt(namber) {
+//   let sum = 0;
+//   for (let i = 0; i <= namber; i++) {
+//     console.log(sum, i);
+//     sum += i;
+//   }
+//   return sum;
+// }
+// console.log(calcResalt(3));
+/**
+ * 
+ * 
+//  task-4
+ *? При завантаженні сторінки користувачеві пропонується
+ *? в prompt ввести число. Введення додається до значення
+ *? змінної total.
+ *? Операція введення числа триває до того часу,
+ *? поки користувач не натисне кнопку Cancel у prompt.
+ *? Після того як користувач припинив введення, натиснувши на
+ *? кнопку Cancel, показати alert з рядком "Загальна сума введених чисел дорівнює [число]."
+ 
+ *! Робити перевірку, що користувач ввів саме число,
+ *! а не довільний набір символів не потрібно.
+ *
+ */
+let total = 0;
+let messege = prompt("ввести число");
+while (messege !== null) {
+  total += Number(messege);
+  messege = prompt("ввести число");
 }
-console.log(calcResalt(3));
+console.log(`Загальна сума введених чисел дорівнює ${total}`);
