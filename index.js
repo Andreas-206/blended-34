@@ -9,9 +9,9 @@
 
 // const answear = prompt("Яка офіційна назва JavaScript?")
 // if (answear === "ECMAScript") { alert("Вірно!");
-    
+
 // } else { alert("Не знаєте? ECMAScript!");
-    
+
 // }
 
 // console.log(answear);
@@ -26,7 +26,19 @@
  70 === 01:10
  */
 
-const count = prompt("Ввидіть хлевини");
-const hour = String(Math.floor(count / 60)).padStart(2,"0");
-const minuts = String(count % 60).padStart(2,"0");
-console.log(`${hour}:${minuts}`);
+// const count = prompt("Ввидіть хлевини");
+// const hour = String(Math.floor(count / 60)).padStart(2,"0");
+// const minuts = String(count % 60).padStart(2,"0");
+// console.log(`${hour}:${minuts}`);
+
+/* Task 3 */
+
+function calcResalt(namber) {
+  let sum = 0;
+  for (let i = 0; i <= namber; i++) {
+    console.log(sum, i);
+    sum += i;
+  }
+  return sum;
+}
+console.log(calcResalt(3));
