@@ -58,10 +58,10 @@
  *! а не довільний набір символів не потрібно.
  *
  */
-let total = 0;
-let messege = prompt("ввести число");
-while (messege !== null) {
-total += Number(messege);
-messege = prompt("ввести число");
-}
-console.log(`Загальна сума введених чисел дорівнює ${total}`);
+// let total = 0;
+// let messege = prompt("ввести число");
+// while (messege !== null) {
+// total += Number(messege);
+// messege = prompt("ввести число");
+// }
+// console.log(`Загальна сума введених чисел дорівнює ${total}`);
