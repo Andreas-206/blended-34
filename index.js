@@ -66,7 +66,6 @@
 // }
 // console.log(`Загальна сума введених чисел дорівнює ${total}`);
 
-
 /**
  *? Напиши скрипт для об'єкта user,
  *? послідовно:
@@ -76,7 +75,6 @@
  *? 4 виводить вміст об'єкта users у форматі
  *? ключ: значення використовуючи Object.keys() і for...of
  */
-
 
 //  const user = {
 //     name: "John",
@@ -95,28 +93,39 @@
 //  }
 
 /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників!!. */
+// const someObj = {
+//   worker1: 360,
+//   worker2: 750,
+//   worker3: 240,
+// };
 
-const someObj = {
-    worker1: 360,
-    worker2: 750,
-    worker3: 240,
+// function culcSalaries(obj) {
+//   let sum = 0;
+//   for (const value of Object.values(obj)) {
+//     sum += value;
+//   }
+//   return sum;
+// }
+/**
+ *? Напишіть ф-цію calcTotalPrice(someStones, stonesName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція рахує та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+const stones = [
+  { name: "Изумруд", price: 1300, quantity: 4 },
+  { name: "Бриллиант", price: 2700, quantity: 6 },
+  { name: "Сапфир", price: 400, quantity: 7 },
+  { name: "Щебень", price: 150, quantity: 100 },
+];
+function calcTotalPrice(someStones, stoneName) {
+  for (const stone of someStones) {
+    if (stoneName === stone.name) {
+      return stone.price * stone.quantity;
+    }
+  }
+  return "Такого каменю немає!";
 }
-
-const calcTotal = function (obj) {
-    const valArray = Object.values(obj)
- const user = {
-    name: "John",
-    age: 20,
-    hobby: "tennis",
-    premium: true,
-  };
-
-  user.mood = "happy";
-  user.hobby = "skydiving";
-  user.premium = false;
-
- const keys = Object.keys(user);
- for (const key of keys) {
-    console.log(`${key}: ${user[key]}`);
- } 
-
+console.log(calcTotalPrice(stones, "рлорп"));
