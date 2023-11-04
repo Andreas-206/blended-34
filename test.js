@@ -1,8 +1,8 @@
-const password = 'true';
-const myKey = password;
+// const password = 'true';
+// const myKey = password;
 
-const obj = {
-    [myKey]: false,
-};
+// const obj = {
+//     [myKey]: false,
+// };
 
-console.log(obj);
+// console.log(obj);

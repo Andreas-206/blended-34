@@ -66,7 +66,6 @@
 // }
 // console.log(`Загальна сума введених чисел дорівнює ${total}`);
 
-
 /**
  *? Напиши скрипт для об'єкта user,
  *? послідовно:
@@ -77,19 +76,39 @@
  *? ключ: значення використовуючи Object.keys() і for...of
  */
 
- const user = {
-    name: "John",
-    age: 20,
-    hobby: "tennis",
-    premium: true,
-  };
+//  const user = {
+//     name: "John",
+//     age: 20,
+//     hobby: "tennis",
+//     premium: true,
+//   };
 
-  user.mood = "happy";
-  user.hobby = "skydiving";
-  user.premium = false;
+//   user.mood = "happy";
+//   user.hobby = "skydiving";
+//   user.premium = false;
 
- const keys = Object.keys(user);
- for (const key of keys) {
-    console.log(`${key}: ${user.[key]}` );
- } 
+//  const keys = Object.keys(user);
+//  for (const key of keys) {
+//     console.log(`${key}: ${user.[key]}` );
+//  }
 
+/* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників. */
+
+const someObj = {
+    worker1: 360,
+    worker2: 750,
+    worker3: 240,
+}
+
+const calcTotal = function (obj) {
+    const valArray = Object.values(obj)
+
+    let total = 0
+    for (const curValue of valArray) {
+        total += curValue
+    }
+
+    return total
+}
+
+console.log(calcTotal(someObj))
