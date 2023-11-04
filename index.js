@@ -66,6 +66,7 @@
 // }
 // console.log(`Загальна сума введених чисел дорівнює ${total}`);
 
+
 /**
  *? Напиши скрипт для об'єкта user,
  *? послідовно:
@@ -75,6 +76,7 @@
  *? 4 виводить вміст об'єкта users у форматі
  *? ключ: значення використовуючи Object.keys() і for...of
  */
+
 
 //  const user = {
 //     name: "John",
@@ -102,13 +104,19 @@ const someObj = {
 
 const calcTotal = function (obj) {
     const valArray = Object.values(obj)
+ const user = {
+    name: "John",
+    age: 20,
+    hobby: "tennis",
+    premium: true,
+  };
 
-    let total = 0
-    for (const curValue of valArray) {
-        total += curValue
-    }
+  user.mood = "happy";
+  user.hobby = "skydiving";
+  user.premium = false;
 
-    return total
-}
+ const keys = Object.keys(user);
+ for (const key of keys) {
+    console.log(`${key}: ${user[key]}`);
+ } 
 
-console.log(calcTotal(someObj))
