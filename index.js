@@ -66,7 +66,6 @@
 // }
 // console.log(`Загальна сума введених чисел дорівнює ${total}`);
 
-
 /**
  *? Напиши скрипт для об'єкта user,
  *? послідовно:
@@ -76,7 +75,6 @@
  *? 4 виводить вміст об'єкта users у форматі
  *? ключ: значення використовуючи Object.keys() і for...of
  */
-
 
 //  const user = {
 //     name: "John",
@@ -95,4 +93,85 @@
 //  }
 
 /* Напишіть функцію, яка приймає об'єкт і рахує загальну суму зарплат працівників!!. */
+// const someObj = {
+//   worker1: 360,
+//   worker2: 750,
+//   worker3: 240,
+// };
+
+// function culcSalaries(obj) {
+//   let sum = 0;
+//   for (const value of Object.values(obj)) {
+//     sum += value;
+//   }
+//   return sum;
+// }
+/**
+ *? Напишіть ф-цію calcTotalPrice(someStones, stonesName),
+ *? яка приймає масив об'єктів та
+ *? рядок під назвою каменю.
+ *? Функція рахує та повертає загальну вартість каменів
+ *? з таким ім'ям, ціною та кількістю з об'єкта
+ */
+
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
+// function calcTotalPrice(someStones, stoneName) {
+//   for (const stone of someStones) {
+//     if (stoneName === stone.name) {
+//       return stone.price * stone.quantity;
+//     }
+//   }
+//   return "Такого каменю немає!";
+// }
+// console.log(calcTotalPrice(stones, "рлорп"));
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+// function updateFruits(arr) {
+//   //   const copy = [...arr];
+//   const frutAll = [];
+//   let id = 1;
+//   for (const frut of arr) {
+//     const newFruit = { ...frut };
+//     newFruit.price = newFruit.price * 0.8;
+//     newFruit.id = id;
+//     frutAll.push(newFruit);
+//     id += 1;
+//   }
+//   return frutAll;
+// }
+
+function updateFruits(arr) {
+  //   const copy = [...arr];
+  const frutAll = [];
+  let id = 1;
+  for (const frut of arr) {
+    const newFruit = {
+      ...frut,
+      price: frut.price * 0.8,
+      id,
+    };
+
+    frutAll.push(newFruit);
+    id += 1;
+  }
+  return frutAll;
+}
+const result = updateFruits(fruits);
+
+console.log(result);
+console.log(fruits);
 
