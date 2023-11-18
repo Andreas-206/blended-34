@@ -135,11 +135,11 @@
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 // function updateFruits(arr) {
 //   //   const copy = [...arr];
 //   const frutAll = [];
@@ -154,24 +154,54 @@ const fruits = [
 //   return frutAll;
 // }
 
-function updateFruits(arr) {
-  //   const copy = [...arr];
-  const frutAll = [];
-  let id = 1;
-  for (const frut of arr) {
-    const newFruit = {
-      ...frut,
-      price: frut.price * 0.8,
-      id,
-    };
+// function updateFruits(arr) {
+//   //   const copy = [...arr];
+//   const frutAll = [];
+//   let id = 1;
+//   for (const frut of arr) {
+//     const newFruit = {
+//       ...frut,
+//       price: frut.price * 0.8,
+//       id,
+//     };
 
-    frutAll.push(newFruit);
-    id += 1;
-  }
-  return frutAll;
+//     frutAll.push(newFruit);
+//     id += 1;
+//   }
+//   return frutAll;
+// }
+// const result = updateFruits(fruits);
+
+// console.log(result);
+// console.log(fruits);
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: "apple", price: 200 },
+  { name: "orange", price: 300 },
+  { name: "grapes", price: 750 },
+];
+
+// function newFruits(arr) {
+//   return arr.map((fruit, index) => {
+//     return {
+//       ...fruit,
+//       price: fruit.price * 0.8,
+//       id: index + 1,
+//     };
+//   });
+// }
+console.log(newFruits(fruits));
+
+function newFruits(arr) {
+  return arr.map((fruit, index) => ({
+    ...fruit,
+    price: fruit.price * 0.8,
+    id: index + 1,
+  }));
 }
-const result = updateFruits(fruits);
-
-console.log(result);
-console.log(fruits);
-
