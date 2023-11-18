@@ -223,8 +223,12 @@
 //   this.userName = userObject.name;
 //   this.age = userObject.age;
 //   this.numbersOfPost = userObject.numbers;
-// };
 
+//   this.getInfo = function () {
+//     return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
+//   };
+// };
+// // Правильне створ методу
 // User.prototype.getInfo = function () {
 //   return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
 // };
