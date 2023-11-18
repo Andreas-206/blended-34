@@ -196,12 +196,12 @@ const fruits = [
 //     };
 //   });
 // }
-console.log(newFruits(fruits));
+// console.log(newFruits(fruits));
 
-function newFruits(arr) {
-  return arr.map((fruit, index) => ({
-    ...fruit,
-    price: fruit.price * 0.8,
-    id: index + 1,
-  }));
-}
+// function newFruits(arr) {
+//   return arr.map((fruit, index) => ({
+//     ...fruit,
+//     price: fruit.price * 0.8,
+//     id: index + 1,
+//   }));
+// }
