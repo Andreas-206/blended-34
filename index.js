@@ -181,11 +181,11 @@
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
 // function newFruits(arr) {
 //   return arr.map((fruit, index) => {
@@ -196,12 +196,37 @@ const fruits = [
 //     };
 //   });
 // }
-console.log(newFruits(fruits));
+// console.log(newFruits(fruits));
 
-function newFruits(arr) {
-  return arr.map((fruit, index) => ({
-    ...fruit,
-    price: fruit.price * 0.8,
-    id: index + 1,
-  }));
-}
+// function newFruits(arr) {
+//   return arr.map((fruit, index) => ({
+//     ...fruit,
+//     price: fruit.price * 0.8,
+//     id: index + 1,
+//   }));
+// }
+
+/**
+*? Напиши функцію конструктор User для 
+*? створення користувача з такими властивостями:
+*? a. userName - ім'я, рядок
+*? b. age - вік, число
+*? c. numbersOfPost - кількість постів, число
+*? d. функція очікує 1 параметр - об'єкт налаштувань з однойменними властивостями
+
+*? Додай метод getInfo(), який повертає рядок:
+*? `Користувачеві ${ім'я} ${вік} років і в нього ${кількістьПублікацій} публікацій.`
+
+ */
+
+// const User = function (userObject) {
+//   this.userName = userObject.name;
+//   this.age = userObject.age;
+//   this.numbersOfPost = userObject.numbers;
+// };
+
+// User.prototype.getInfo = function () {
+//   return `Користувачеві ${this.userName} ${this.age} років і в нього ${this.numbersOfPost} публікацій.`;
+// };
+// const user = new User({ name: "Tania", age: 22, numbers: 2 });
+// console.log(user);
