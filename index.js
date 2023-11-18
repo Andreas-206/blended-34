@@ -181,11 +181,11 @@
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: "apple", price: 200 },
-  { name: "orange", price: 300 },
-  { name: "grapes", price: 750 },
-];
+// const fruits = [
+//   { name: "apple", price: 200 },
+//   { name: "orange", price: 300 },
+//   { name: "grapes", price: 750 },
+// ];
 
 // function newFruits(arr) {
 //   return arr.map((fruit, index) => {
@@ -196,12 +196,31 @@ const fruits = [
 //     };
 //   });
 // }
-console.log(newFruits(fruits));
+// console.log(newFruits(fruits));
 
-function newFruits(arr) {
-  return arr.map((fruit, index) => ({
-    ...fruit,
-    price: fruit.price * 0.8,
-    id: index + 1,
-  }));
-}
+// function newFruits(arr) {
+//   return arr.map((fruit, index) => ({
+//     ...fruit,
+//     price: fruit.price * 0.8,
+//     id: index + 1,
+//   }));
+// }
+//TODO:==============================================
+/**
+*? Поверніть об'єкт, в якому вказано кількість тегів.
+*? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
+
+ */
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "nodejs"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+  { id: "003", likes: 8, tags: ["css", "react"] },
+  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+];
+
+const newTweets = tweets.flatMap(element => element.tags).reduce((acc, element) => {
+  return {...acc, [element]: acc[element] ? acc[element] + 1 : 1} 
+},{})
+
+console.log(newTweets);
