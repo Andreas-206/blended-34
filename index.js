@@ -4,11 +4,11 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
 
-const btnRef = document.querySelector('#alertButton');
-const inputRef = document.querySelector('#alertInput');
+const btnRef = document.querySelector("#alertButton");
+const inputRef = document.querySelector("#alertInput");
 
-btnRef.addEventListener('click', () => {
-    console.log(inputRef.value);
+btnRef.addEventListener("click", () => {
+  console.log(inputRef.value);
 });
 
 //TODO:==============================================
@@ -18,14 +18,14 @@ btnRef.addEventListener('click', () => {
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
-const leftSwapInputEl = document.querySelector('#leftSwapInput');
-const rightSwapInputEl = document.querySelector('#rightSwapInput');
-const btnTask2EL = document.querySelector('#swapButton');
+const leftSwapInputEl = document.querySelector("#leftSwapInput");
+const rightSwapInputEl = document.querySelector("#rightSwapInput");
+const btnTask2EL = document.querySelector("#swapButton");
 
-btnTask2EL.addEventListener('click', () => {
-    const leftInputText = leftSwapInputEl.value;
-    leftSwapInputEl.value = rightSwapInputEl.value;
-    rightSwapInputEl.value = leftInputText;
+btnTask2EL.addEventListener("click", () => {
+  const leftInputText = leftSwapInputEl.value;
+  leftSwapInputEl.value = rightSwapInputEl.value;
+  rightSwapInputEl.value = leftInputText;
 });
 
 //TODO:==============================================
@@ -36,6 +36,17 @@ btnTask2EL.addEventListener('click', () => {
 і кнопка набуває початкового вигляду.
 */
 
+const passwordInputRef = document.querySelector("#passwordInput");
+const passwordButtonRef = document.querySelector("#passwordButton");
+passwordButtonRef.addEventListener("click", () => {
+  if (passwordButtonRef.textContent === "Приховати") {
+    passwordButtonRef.textContent = "Розкрити";
+    passwordInputRef.setAttribute("type", "password");
+  } else {
+    passwordButtonRef.textContent = "Приховати";
+    passwordInputRef.setAttribute("type", "text");
+  }
+});
 //TODO:==============================================
 /*
 Завдання 4
