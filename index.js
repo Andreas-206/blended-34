@@ -53,6 +53,27 @@ passwordButtonRef.addEventListener("click", () => {
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
 
+const boxRef = document.querySelector('#box');
+const decreaseRef = document.querySelector('#decrease');
+const increaseRef = document.querySelector('#increase');
+
+decreaseRef.addEventListener('click', () => {
+  const size = getComputedStyle(boxRef).width;
+  boxRef.style.width = parseInt(size) - 10 + "px";
+  boxRef.style.height = parseInt(size) - 10 + "px";
+
+
+
+})
+
+increaseRef.addEventListener('click', () => {
+  const size = getComputedStyle(boxRef).width;
+  boxRef.style.width = parseInt(size) + 10 + "px";
+  boxRef.style.height = parseInt(size) + 10 + "px";
+
+
+})
+
 //TODO:==============================================
 /*
 Завдання 5
