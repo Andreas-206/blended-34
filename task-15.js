@@ -31,7 +31,6 @@ const client = new Client("skdjks", "125");
 // console.log(client.login);
 console.log((client.login = "87"));
 
-
 /*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
   і перевіряє правильність закриття дужок () {} []
   Якщо рядок містить коректний код функція повертає true.
@@ -45,7 +44,47 @@ const someFn = `function foo() {
 
 console.log(checkBrackets(someFn));
 
-checkBrackets(someFn){
+function checkBrackets(someFn) {
+  const stack = [];
+  const bracketsMap = {
+    "(": ")",
+    "{": "}",
+    "[": "]",
+  };
 
-  
-};
+  for (const char of someFn) {
+    if (bracketsMap[char]) {
+      stack.push(char);
+    } else if (Object.values(bracketsMap).includes(char)) {
+      if (bracketsMap[stack.pop()] !== char) {
+        return false;
+      }
+    }
+  }
+
+  return stack.length === 0;
+}
+
+// function checkBrackets(str) {
+//   const stack = [];
+//   const obj = {
+//     "(": ")",
+//     "{": "}",
+//     "[": "]",
+//   };
+
+//   for (let i = 0; i < str.length; i++) {
+//     const bracket = str[i];
+//     if (bracket === "(" || bracket === "{" || bracket === "[") {
+//       stack.push(bracket);
+//     }
+//     if (bracket === "}" || bracket === ")" || bracket === "]") {
+//       const lastEl = stack.pop();
+//       if (bracket !== obj[lastEl]) {
+//         return false;
+//       }
+//     }
+//   }
+//   if (stack.length) return false;
+//   return true;
+// }
