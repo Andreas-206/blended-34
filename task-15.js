@@ -88,3 +88,34 @@ function checkBrackets(someFn) {
 //   if (stack.length) return false;
 //   return true;
 // }
+
+// function checkBrackets(someFn) {
+//   openBrackets = ["(", "{", "["];
+//   closeBrackets = [")", "}", "]"];
+
+//   const getCloseBracket = function (bracket) {
+//     return closeBrackets[openBrackets.indexOf(bracket)];
+//   };
+
+//   currentBrackets = [];
+
+//   for (i = 0; i <= someFn.length - 1; i++) {
+//     currentSymbol = someFn[i];
+//     if (openBrackets.includes(currentSymbol)) {
+//       currentBrackets.push(currentSymbol);
+//     } else if (closeBrackets.includes(currentSymbol)) {
+//       if (currentBrackets.length) {
+//         lastBracket = currentBrackets[currentBrackets.length - 1];
+//         if (getCloseBracket(lastBracket) === currentSymbol) {
+//           currentBrackets.pop();
+//         } else {
+//           return false;
+//         }
+//       } else {
+//         return false;
+//       }
+//     }
+//   }
+
+//   return currentBrackets.length ? false : true;
+// }
