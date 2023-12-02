@@ -4,11 +4,11 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
 
-const btnRef = document.querySelector("#alertButton");
-const inputRef = document.querySelector("#alertInput");
+const btnRef = document.querySelector('#alertButton');
+const inputRef = document.querySelector('#alertInput');
 
-btnRef.addEventListener("click", () => {
-  console.log(inputRef.value);
+btnRef.addEventListener('click', () => {
+    console.log(inputRef.value);
 });
 
 //TODO:==============================================
@@ -18,14 +18,14 @@ btnRef.addEventListener("click", () => {
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
-const leftSwapInputEl = document.querySelector("#leftSwapInput");
-const rightSwapInputEl = document.querySelector("#rightSwapInput");
-const btnTask2EL = document.querySelector("#swapButton");
+const leftSwapInputEl = document.querySelector('#leftSwapInput');
+const rightSwapInputEl = document.querySelector('#rightSwapInput');
+const btnTask2EL = document.querySelector('#swapButton');
 
-btnTask2EL.addEventListener("click", () => {
-  const leftInputText = leftSwapInputEl.value;
-  leftSwapInputEl.value = rightSwapInputEl.value;
-  rightSwapInputEl.value = leftInputText;
+btnTask2EL.addEventListener('click', () => {
+    const leftInputText = leftSwapInputEl.value;
+    leftSwapInputEl.value = rightSwapInputEl.value;
+    rightSwapInputEl.value = leftInputText;
 });
 
 //TODO:==============================================
@@ -36,16 +36,16 @@ btnTask2EL.addEventListener("click", () => {
 і кнопка набуває початкового вигляду.
 */
 
-const passwordInputRef = document.querySelector("#passwordInput");
-const passwordButtonRef = document.querySelector("#passwordButton");
-passwordButtonRef.addEventListener("click", () => {
-  if (passwordButtonRef.textContent === "Приховати") {
-    passwordButtonRef.textContent = "Розкрити";
-    passwordInputRef.setAttribute("type", "password");
-  } else {
-    passwordButtonRef.textContent = "Приховати";
-    passwordInputRef.setAttribute("type", "text");
-  }
+const passwordInputRef = document.querySelector('#passwordInput');
+const passwordButtonRef = document.querySelector('#passwordButton');
+passwordButtonRef.addEventListener('click', () => {
+    if (passwordButtonRef.textContent === 'Приховати') {
+        passwordButtonRef.textContent = 'Розкрити';
+        passwordInputRef.setAttribute('type', 'password');
+    } else {
+        passwordButtonRef.textContent = 'Приховати';
+        passwordInputRef.setAttribute('type', 'text');
+    }
 });
 //TODO:==============================================
 /*
@@ -58,21 +58,16 @@ const decreaseRef = document.querySelector('#decrease');
 const increaseRef = document.querySelector('#increase');
 
 decreaseRef.addEventListener('click', () => {
-  const size = getComputedStyle(boxRef).width;
-  boxRef.style.width = parseInt(size) - 10 + "px";
-  boxRef.style.height = parseInt(size) - 10 + "px";
-
-
-
-})
+    const size = getComputedStyle(boxRef).width;
+    boxRef.style.width = parseInt(size) - 10 + 'px';
+    boxRef.style.height = parseInt(size) - 10 + 'px';
+});
 
 increaseRef.addEventListener('click', () => {
-  const size = getComputedStyle(boxRef).width;
-  boxRef.style.width = parseInt(size) + 10 + "px";
-  boxRef.style.height = parseInt(size) + 10 + "px";
-
-
-})
+    const size = getComputedStyle(boxRef).width;
+    boxRef.style.width = parseInt(size) + 10 + 'px';
+    boxRef.style.height = parseInt(size) + 10 + 'px';
+});
 
 //TODO:==============================================
 /*
@@ -86,6 +81,15 @@ increaseRef.addEventListener('click', () => {
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
+
+const btnDoubleEl = document.querySelector('#double');
+const listItemsEl = document.querySelectorAll('.listItem');
+
+btnDoubleEl.addEventListener('click', () => {
+    listItemsEl.forEach((liItem) => {
+        liItem.textContent = BigInt(liItem.textContent) ** 2n;
+    });
+});
 
 //TODO:==============================================
 /*
