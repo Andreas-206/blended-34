@@ -100,3 +100,29 @@ https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/MouseEvent
 https://developer.mozilla.org/ru/docs/Web/API/MouseEvent/pageX
 https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/pageY
 */
+
+const innerElem = document.querySelector('.innerCircle');
+const startPosition = [innerElem.offsetLeft, innerElem.offsetTop];
+const sizeElem = [innerElem.offsetWidth / 2, innerElem.offsetHeight / 2];
+
+let isActive = false;
+
+innerElem.addEventListener('click', () => {
+    if (isActive) {
+        innerElem.style.position = 'static';
+        document.removeEventListener('mousemove', handleMouseMovement);
+    } else {
+        innerElem.style.position = 'absolute';
+        innerElem.style.left = startPosition[0] + 'px';
+        innerElem.style.top = startPosition[1] + 'px';
+        document.addEventListener('mousemove', handleMouseMovement);
+    }
+    isActive = !isActive;
+});
+
+function handleMouseMovement(event) {
+    innerElem.style.left = event.pageX - sizeElem[0] + 'px';
+    innerElem.style.top = event.pageY - sizeElem[1] + 'px';
+}
+
+// бібліотека datatransfer
